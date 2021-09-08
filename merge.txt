@@ -56,3 +56,22 @@ step 3 : now we have to push our commits to the main branch
 ------------------------------------------------------------------------------------------------------------------
 -> after this we cna see the updated commits upto date or branches will be updated as per the upstream account is reflected in the our forked account also 
 
+
+
+
+
+
+
+==========================================================================================================================
+
+
+Another method to do this process is using the pull request :
+
+scenario :
+- som changes made in hte mian branch in the upstream account and made the commit and now if we want to make it same in the forked account
+main branch also means then we have to do this pull command
+
+
+	code : git pull upstream main  (by this command the added commits in he upstream account will be reflected in out forked account main branch)
+
+
