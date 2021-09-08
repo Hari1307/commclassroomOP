@@ -1,0 +1,58 @@
+now we have to see that our forked main branch commits and the upstream account main branch commits are same and if it is not then we cannot see the latest updates that are in the forked account
+so what we have to do is we have to maintain the 2 account of main branch at same (updated)
+
+
+- there are 2 method to do this
+1 : using the github there we can see the fetch upstream button by clicking that we can maintain the 2 amain branches
+
+2 : another method is by using the git commands that is shown below :
+
+step 1 : we have to fetch all the commits from the upstream account all branches and their upstream also will be fetched
+
+        code : git fetch --all --prune    (--all means it will fetch all the branches and --prune means all the deleted files and commits also branches)
+	
+	eg : $ git fetch --all --prune
+		Fetching origin
+		Fetching upstream
+		From https://github.com/kunal-kushwaha/commclassroomOP
+		 * [new branch]      kunal      -> upstream/kunal
+		 * [new branch]      main       -> upstream/main
+		 * [new branch]      temp       -> upstream/temp
+
+	- so all the branches will be fetched 
+
+------------------------------------------------------------------------------------------------------------------
+
+
+step 2 : now we have to reset (my account) main branch of origin to the main branch of the upstream
+	
+	code : git reset --hard upstream/main
+	
+	eg : $ git reset --hard upstream/main
+	     HEAD is now at 1bb5c84 Merge pull request #3 from kunal-kushwaha/temp
+  
+	     $ git log
+		commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e (HEAD -> main, upstream/main, origin/main, origin/HEAD)
+		Merge: 97d9769 8da5685
+		Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+		Date:   Sun Aug 1 13:05:39 2021 +0530
+
+	    Merge pull request #3 from kunal-kushwaha/temp
+
+	    kunal changed line 4
+
+		commit 8da568584cee152751162a246296b419e11513e9 (upstream/temp)
+		Merge: 56039e8 97d9769
+		Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+		Date:   Sun Aug 1 13:05:08 2021 +0530
+
+   	    Merge branch 'main' into temp
+
+
+------------------------------------------------------------------------------------------------------------------
+
+step 3 : now we have to push our commits to the main branch 
+	code : git push origin min
+------------------------------------------------------------------------------------------------------------------
+-> after this we cna see the updated commits upto date or branches will be updated as per the upstream account is reflected in the our forked account also 
+
