@@ -1,0 +1,9 @@
+the use of fork is to access the others code and modify it to our need and if we change the main branch code from where we forked then it is like changing some ones code so that option is not available 
+so we use the fork to our account and then we can clone it to our git using the url and the command is : [ git clone (url) ]
+
+
+from where i forked the project that is known as the upstream so we can add that upstream url using the command : 
+git remote add upstream https://github.com/kunal-kushwaha/commclassroomOP.git
+
+
+

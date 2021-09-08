@@ -1,0 +1,7 @@
+now we are modified the readme file and we should never commit on the main branch so we are creating hte new branch here 
+
+git branch hari  --> this will create a branch called hari
+git checkout hari --> this will now the head pointer point to the hari branch not in the main branch
+
+
+now if we do the commits then it will commit on the seperate branch that is called hari from now onwards

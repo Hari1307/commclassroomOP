@@ -1,0 +1,51 @@
+if i forked some repository from another ones code in github and iam doing the changed in the new branch name and if i want to make this changes to the upstrean account(the account which we forked) then i have to make a pullrequest to the upstream account and they will review and they will add your code to their code (this process is called as merging your code in the another codebase) 
+
+
+-> we dont have access to push our code to the upstream account (only have access to our account)
+
+
+process of creating new branch :
+git branch haribranch    (here haribranch is the branch name)
+
+then we have to change our head pointer from main branch to the haribranch 
+
+now we will add to staging and make a commit  
+
+
+process of pushing to the github : 
+
+after making changes and now i made a commit using the different branch called haribranch
+
+now pushing : 
+git push origin haribranch 
+
+after this in branch icon we can see the 2 branch one is main and another one is your branch that is haribranch
+
+
+- after this command we can go and see the github and there we can see one notification called compare and pull request
+- if we go into the compare and pull request we can create on pull request to the upstream account and they will see and if it is ok they will merge your code to the main branch and they only have the access to merge to the main branch 
+
+
+
+so now if we did not asked for the pull request and once again we are modifying the codes and commiting and pushing means then it will not create another pull request it will add the commit only 
+
+by this what we have to know is for every change or feature we are working we have to create a new branch and then only we have to push to the github and that will generate the pull request
+
+
+
+
+if we want to remove the commit made in the last one in github we can do onething is that we can go to the previous version of our log and then it last commit come to the unstaged stage and then we can remove it or we can stash it 
+
+process is take the hashcode below the new commit and do 
+git reset (below hashcode) -> this will make the names.txt to unstaged state 
+
+git add .
+
+git stash -> this will move that code to the stash area 
+
+git stash clear -> here we are clearing that stash files 
+
+now we have to force push the the branch of last commit because there already last saved pushes will be there so we have to force push it by command : 
+
+git push origin haribranch -f   -> this will force push it 
+ 
