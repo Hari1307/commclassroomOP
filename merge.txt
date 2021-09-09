@@ -72,6 +72,7 @@ scenario :
 main branch also means then we have to do this pull command
 
 
-	code : git pull upstream main  (by this command the added commits in he upstream account will be reflected in out forked account main branch)
-
-
+	code : git pull upstream main  (by this command the added commits in he upstream account will be reflected in out forked account main branch) 
+	
+	eg : if i done some changes in the main branch and iam the upstream and if you want to pull it then you can use the (git pull upstream main) this will pull the main branch and 
+	after that we have to push that main branch to our main branch using the command git push origin main 
