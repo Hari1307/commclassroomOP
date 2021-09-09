@@ -12,4 +12,142 @@ git rebase -i (hashcode below what we need to squash)    -> here -i means the in
 after this we will get some interactive environment page and there we can see the commits above the given hashcode and there it will be [pick a12cx 1] like this 4 time will be there 
 if we want to squash the we remove the pick and write s 
 
+commit ad496ee143d67c7a0541b62dcd1b497b06975dac (HEAD -> temp)
+Author: Hari <Harijain57@gmail.com>
+Date:   Thu Sep 9 12:47:42 2021 +0530
 
+    pick and squash file is added
+
+commit fd0cef17414d195ca1f576d38f4fb548c3240688
+Author: Hari <Harijain57@gmail.com>
+Date:   Thu Sep 9 12:47:10 2021 +0530
+
+    4
+
+commit 470bc3bdcd1904a4570d2a2f431c2864d3b05249
+Author: Hari <Harijain57@gmail.com>
+Date:   Thu Sep 9 12:47:06 2021 +0530
+
+    3
+
+commit eed6d2788c5e915eeff1e264829445f7e72705a1
+Author: Hari <Harijain57@gmail.com>
+Date:   Thu Sep 9 12:47:00 2021 +0530
+
+    2
+
+commit 3712afda9b41c1b1a12f9b35852c9ee214270f8d
+Author: Hari <Harijain57@gmail.com>
+Date:   Thu Sep 9 12:46:26 2021 +0530
+
+    1
+
+
+-- here these are the new commits made and if we want to sqash this 4 commits then we use the below hash code of message 1
+
+and give the command git rebase -i (below hashcode of 1)
+
+-> the interactive environment will come and that will be like  
+pick 3712afd 1
+pick eed6d27 2
+pick 470bc3b 3
+pick fd0cef1 4
+pick ad496ee pick and squash file is added
+
+# Rebase f0b2f3f..ad496ee onto f0b2f3f (5 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+
+
+___________________________________________
+
+here what we need to do is squash and the command is s 
+for example 
+	if we want to squash the 2 3 4 (then it will merged into 1) then we change s to 2 3 4 
+ 	if we want to squash the 2 3  (then it will be merged into previous commit and that is 1) so we change s to 2 and 3 
+
+
+if we done this and we have to save using :x command and then it will take you to the another interface and there we can enter the message for the creating commit
+
+# This is a combination of 4 commits.
+# This is the 1st commit message:
+
+1
+
+# This is the commit message #2:
+
+2
+
+# This is the commit message #3:
+
+3
+
+# This is the commit message #4:
+
+4
+# this is the commit message #pickandSquash is added
+
+asddf
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Thu Sep 9 12:32:02 2021 +0530
+#
+# interactive rebase in progress; onto f0b2f3f
+# Last commands done (4 commands done):
+#    squash 99aa238 3
+#    squash 3d461c7 4
+# No commands remaining.
+# You are currently rebasing branch 'haribranch' on 'f0b2f3f'.
+#
+# Changes to be committed:
+#       new file:   1
+#       new file:   2
+#       new file:   3
+#       new file:   4
+#       new file:   PickandSquash.txt
+#
+  
+
+here we have to give the message to the commit 
+
+
+here we will delete all the message lines like 1 2 3 4 
+and give only one message as commits are merged and the pickandSquash file is added
+
+
+
+after this it wil come out and it we go and check the git log then will see only the one commit and that is : 
+
+commit d76ddfadbe3de552e27942390bdf257c00060bf8 (HEAD -> temp)
+Author: Hari <Harijain57@gmail.com>
+Date:   Thu Sep 9 12:46:26 2021 +0530
+
+    commits merged and the pickandSquash file is added
+
+
+
+after this if we push it will be reflected in the github
+git push origin temp 
