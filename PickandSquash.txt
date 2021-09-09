@@ -1,0 +1,15 @@
+here what is pick and squash is like the concept is like
+
+-> for example if we have some 4 commits and if we want to make them as single commit what we will do is that we will take the hashcode below that 4 commits and reset and then the 4 commit changes will be 
+unstaged then we can make the new commit as final commit.
+
+-> another method is by using the pick and squash method
+
+commands are : 
+
+git rebase -i (hashcode below what we need to squash)    -> here -i means the interactive environment
+
+after this we will get some interactive environment page and there we can see the commits above the given hashcode and there it will be [pick a12cx 1] like this 4 time will be there 
+if we want to squash the we remove the pick and write s 
+
+
